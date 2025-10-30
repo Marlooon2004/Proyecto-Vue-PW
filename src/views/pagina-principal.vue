@@ -1,106 +1,105 @@
 <template>
-  <header class="header">
-    <nav class="navbar">
-      <div class="logo">
-        <h2>RentaMotos Habana</h2>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#flota">Flota</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <div class="nav-buttons">
-        <a href="#reservar" class="btn-reservar">Reservar Ahora</a>
-      </div>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
-  <div class="contenedor_principal">
-    <h1>Renta de motos habana</h1>
-    <div class="contenedor_inicio_pagina">
-      <div class="contenedor_texto">
-        <h2>Seguridad Primero</h2>
-        <p>
-          Cada moto pasa por rigurosas revisiones técnicas antes de cada renta. Incluimos equipos de
-          protección certificados y seguro contra accidentes. Tu tranquilidad es nuestra máxima
-          prioridad en cada kilómetro.
-        </p>
-      </div>
-      <div class="contenedor_texto">
-        <h2>Cobertura Nacional</h2>
-        <p>
-          ¿Planeas un viaje interestatal? Tenemos alianzas en múltiples ciudades. Devuelve tu moto
-          en cualquier de nuestras sucursales asociadas. Viaja sin límites por todo el territorio
-          nacional.
-        </p>
-      </div>
-      <div class="contenedor_texto">
-        <h2>Reserva Instantánea</h2>
-        <p>
-          Olvídate de trámites interminables y papeleos complicados. Con nuestro sistema online,
-          reserva tu moto en menos de 3 minutos. Recibe confirmación inmediata y prepárate para
-          rodar.
-        </p>
-      </div>
-    </div>
-    <div class="contenedor_texto_imagen">
-      <div>
-        <img src="../images/OIP (1).webp" class="imagen" />
-      </div>
-      <div class="contenedor_texto">
-        <h2>Precios Sin Sorpresas</h2>
-        <p>
-          Todo incluido en tu tarifa: seguro, casco, guantes y asistencia vial. Sin costos ocultos
-          ni cargos adicionales al finalizar. Transparencia total desde el momento de tu cotización.
-        </p>
-      </div>
-    </div>
-    <div class="contenedor_texto_imagen">
-      <div class="contenedor_texto">
-        <h2>Flota Actualizada</h2>
-        <p>
-          Motos de última generación con tecnología de punta. Desde scooters urbanos hasta adventure
-          para terracería. Encuentra la compañera perfecta para cada tipo de viaje.
-        </p>
-      </div>
-      <div>
-        <img src="../images/Screenshot-2024-03-18T100234.536.png" class="imagen" />
-      </div>
-    </div>
-    <div class="contenedor_texto_imagen">
-      <div>
-        <img src="../images/OIP.webp" class="imagen" />
-      </div>
-      <div class="contenedor_texto">
-        <h2>Experiencia Premium</h2>
-        <p>
-          Asesoramiento personalizado para elegir la moto ideal. Kit de bienvenida con mapas y rutas
-          recomendadas. Hacemos de tu viaje una experiencia inolvidable.
-        </p>
-      </div>
-    </div>
-    <div class="contenedor_texto_imagen">
-      <div class="contenedor_texto">
-        <h2>Flexibilidad Total</h2>
-        <p>
-          Renta por horas, días, semanas o meses. Modifica o cancela tu reserva sin complicaciones.
-          Planes personalizados según tus necesidades específicas..
-        </p>
-      </div>
-      <div>
-        <img src="../images/renta-de-motos-en-guadalajara-1.jpg" class="imagen" />
-      </div>
-    </div>
-  </div>
+  <div class="contenerdor_general">
+    <!--header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <h2>RentaMotos Habana</h2>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#top">Inicio</a></li>
+          <li><router-link to="/iniciar-seccion">Iniciar sesión</router-link></li>
+          <li><router-link to="">Motos</router-link></li>
+          <li><a href="#footer_id">Contacto</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <a href="#reservar" class="btn-reservar">Reservar Ahora</a>
+        </div>
+      </nav>
+    </header>
 
-  <footer class="footer">
-    <div class="container">
+    <!-- Contenido intermedio -->
+    <div class="contenedor_principal">
+      <h1>Renta de motos habana</h1>
+      <div class="contenedor_inicio_pagina">
+        <div class="contenedor_texto">
+          <h2>Seguridad Primero</h2>
+          <p>
+            Cada moto pasa por rigurosas revisiones técnicas antes de cada renta. Incluimos equipos
+            de protección certificados y seguro contra accidentes. Tu tranquilidad es nuestra máxima
+            prioridad en cada kilómetro.
+          </p>
+        </div>
+        <div class="contenedor_texto">
+          <h2>Cobertura Nacional</h2>
+          <p>
+            ¿Planeas un viaje interestatal? Tenemos alianzas en múltiples ciudades. Devuelve tu moto
+            en cualquier de nuestras sucursales asociadas. Viaja sin límites por todo el territorio
+            nacional.
+          </p>
+        </div>
+        <div class="contenedor_texto">
+          <h2>Reserva Instantánea</h2>
+          <p>
+            Olvídate de trámites interminables y papeleos complicados. Con nuestro sistema online,
+            reserva tu moto en menos de 3 minutos. Recibe confirmación inmediata y prepárate para
+            rodar.
+          </p>
+        </div>
+      </div>
+      <div class="contenedor_texto_imagen">
+        <div>
+          <img src="../images/OIP (1).webp" class="imagen" />
+        </div>
+        <div class="contenedor_texto">
+          <h2>Precios Sin Sorpresas</h2>
+          <p>
+            Todo incluido en tu tarifa: seguro, casco, guantes y asistencia vial. Sin costos ocultos
+            ni cargos adicionales al finalizar. Transparencia total desde el momento de tu
+            cotización.
+          </p>
+        </div>
+      </div>
+      <div class="contenedor_texto_imagen">
+        <div class="contenedor_texto">
+          <h2>Flota Actualizada</h2>
+          <p>
+            Motos de última generación con tecnología de punta. Desde scooters urbanos hasta
+            adventure para terracería. Encuentra la compañera perfecta para cada tipo de viaje.
+          </p>
+        </div>
+        <div>
+          <img src="../images/Screenshot-2024-03-18T100234.536.png" class="imagen" />
+        </div>
+      </div>
+      <div class="contenedor_texto_imagen">
+        <div>
+          <img src="../images/OIP.webp" class="imagen" />
+        </div>
+        <div class="contenedor_texto">
+          <h2>Experiencia Premium</h2>
+          <p>
+            Asesoramiento personalizado para elegir la moto ideal. Kit de bienvenida con mapas y
+            rutas recomendadas. Hacemos de tu viaje una experiencia inolvidable.
+          </p>
+        </div>
+      </div>
+      <div class="contenedor_texto_imagen">
+        <div class="contenedor_texto">
+          <h2>Flexibilidad Total</h2>
+          <p>
+            Renta por horas, días, semanas o meses. Modifica o cancela tu reserva sin
+            complicaciones. Planes personalizados según tus necesidades específicas..
+          </p>
+        </div>
+        <div>
+          <img src="../images/renta-de-motos-en-guadalajara-1.jpg" class="imagen" />
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer" id="footer_id">
       <div class="footer-content">
         <!-- Información de contacto -->
         <div class="footer-section">
@@ -152,15 +151,6 @@
             Dirección: Calle Albear #123
           </p>
         </div>
-        <!-- Enlaces rápidos -->
-        <div class="footer-section">
-          <h3>Enlaces Rápidos</h3>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#flota">Nuestra Flota</a></li>
-          </ul>
-        </div>
         <!-- Redes sociales -->
         <div class="footer-section">
           <h3>Síguenos</h3>
@@ -190,7 +180,7 @@
                 viewBox="0 0 16 16"
               >
                 <path
-                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 1 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
                 />
               </svg>
               Instagram</a
@@ -217,13 +207,34 @@
       <div class="footer-bottom">
         <p>&copy; 2024 Renta de Motos Habana. Todos los derechos reservados.</p>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </template>
 
-<script></script>
+<script setup></script>
 
-<style>
+<style scoped>
+/* Reset global para body y html */
+:global(body) {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+:global(html) {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos locales del componente */
+.contenerdor_general {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .header {
   background-color: #1a1a1a;
   color: white;
@@ -232,6 +243,7 @@
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
 }
 
 .navbar {
@@ -289,20 +301,6 @@
   background-color: #e55a00;
 }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 3px 0;
-  transition: 0.3s;
-}
-
 /* RESPONSIVE HEADER */
 @media (max-width: 768px) {
   .navbar {
@@ -330,10 +328,6 @@
     display: none;
   }
 
-  .menu-toggle {
-    display: flex;
-  }
-
   .logo h2 {
     font-size: 1.3em;
   }
@@ -341,6 +335,10 @@
 
 .contenedor_principal {
   margin-top: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
 h1 {
@@ -353,9 +351,8 @@ h2 {
 
 .contenedor_inicio_pagina {
   display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
   gap: 20px;
+  margin: 20px 0;
 }
 
 .contenedor_texto {
@@ -367,21 +364,20 @@ h2 {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin: 40px 20px;
+  margin: 40px 0;
   padding: 20px;
 }
 
-/* NUEVAS REGLAS PARA DIVIDIR MITAD Y MITAD */
 .contenedor_texto_imagen > div {
-  flex: 1; /* Ambos divs hijos ocupan el mismo espacio */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .imagen {
-  width: 100%; /* Ocupa todo el ancho del div contenedor */
-  height: 300px; /* Altura fija para consistencia */
+  width: 100%;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -401,14 +397,12 @@ p {
 @media (max-width: 768px) {
   .contenedor_inicio_pagina {
     flex-direction: column;
-    margin-left: 15px;
-    margin-right: 15px;
   }
 
   .contenedor_texto_imagen {
     flex-direction: column;
     text-align: center;
-    margin: 30px 15px;
+    margin: 30px 0;
   }
 
   .imagen {
@@ -421,7 +415,6 @@ p {
     padding: 15px;
   }
 
-  /* En móviles, los divs hijos no necesitan flex:1 */
   .contenedor_texto_imagen > div {
     flex: none;
   }
@@ -429,13 +422,8 @@ p {
 
 /* Móviles */
 @media (max-width: 480px) {
-  .contenedor_inicio_pagina {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
   .contenedor_texto_imagen {
-    margin: 20px 10px;
+    margin: 20px 0;
     gap: 20px;
   }
 
@@ -445,7 +433,6 @@ p {
 
   h1 {
     font-size: 1.8em;
-    padding: 0 10px;
   }
 
   h2 {
@@ -457,24 +444,7 @@ p {
   }
 }
 
-/* Pantallas grandes */
-@media (min-width: 1200px) {
-  .contenedor_principal {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .contenedor_inicio_pagina {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-
-  .contenedor_texto_imagen {
-    margin: 40px 40px;
-  }
-}
-
-/* Efectos hover para mejor interactividad */
+/* Efectos hover */
 .contenedor_texto {
   transition:
     transform 0.3s ease,
@@ -485,35 +455,13 @@ p {
   transform: translateY(-5px);
 }
 
-.contenedor_texto_imagen {
-  transition: all 0.3s ease;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* Prevenir scroll horizontal */
-}
-
+/* FOOTER */
 .footer {
   background-color: #333;
   color: white;
   padding: 40px 0 20px;
   margin-top: 50px;
-  width: 100vw; /* 100% del viewport width */
-  margin-left: calc(-50vw + 50%); /* Truco mágico para centrar y expandir */
-  position: relative;
-  left: 0;
-  right: 0;
-}
-
-/* ELIMINAR COMPLETAMENTE el contenedor .container */
-.footer .container {
   width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
 }
 
 .footer-content {
@@ -536,13 +484,11 @@ body {
   margin-bottom: 15px;
 }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin-bottom: 8px;
+.footer-section p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .footer-section a {
@@ -585,7 +531,7 @@ body {
   margin-right: 5px;
 }
 
-/* Responsive */
+/* Responsive Footer */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
