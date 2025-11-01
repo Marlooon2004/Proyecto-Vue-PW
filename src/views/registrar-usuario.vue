@@ -25,7 +25,6 @@
           @input="validarApellidos"
         />
         <span class="mensaje" :class="validacionApellidos">{{ mensajeApellidos }}</span>
-
         <!-- Usuario -->
         <label for="usuario_id">Usuario</label>
         <input
@@ -75,8 +74,13 @@
         }}</span>
 
         <!-- Botones -->
-        <button class="boton" type="submit">Registrarse</button>
-        <button class="boton" type="button" @click="volverAlMenu">Volver al menú principal</button>
+        <div class="botones">
+          <button class="boton" type="submit">Registrarse</button>
+          <button class="boton" type="button" @click="volverAlMenu">
+            Volver al menú principal
+          </button>
+        </div>
+        <p>Ya eres miembro? <router-link to="/iniciar-seccion">inicia seccion</router-link></p>
       </fieldset>
     </form>
   </div>
@@ -139,7 +143,7 @@ function validarNombre() {
     mensajeNombre.value = 'Mínimo 3 letras, sin números ni símbolos.'
     validacionNombre.value = 'invalido'
   } else {
-    mensajeNombre.value = 'Nombre válido.'
+    mensajeNombre.value = ''
     validacionNombre.value = 'valido'
   }
 }
@@ -153,7 +157,7 @@ function validarApellidos() {
     mensajeApellidos.value = 'Mínimo 3 letras, sin números ni símbolos.'
     validacionApellidos.value = 'invalido'
   } else {
-    mensajeApellidos.value = 'Apellidos válidos.'
+    mensajeApellidos.value = ''
     validacionApellidos.value = 'valido'
   }
 }
@@ -164,21 +168,11 @@ function validarUsuario() {
     mensajeUsuario.value = 'Este campo es obligatorio.'
     validacionUsuario.value = 'invalido'
   } else if (!regex.test(usuario.value)) {
-    mensajeUsuario.value = 'Mínimo 3 caracteres. Se permiten letras, números y símbolos (@ . _ -).'
+    mensajeUsuario.value = 'Mínimo 3 caracteres. Se permiten letras, números y símbolos.'
     validacionUsuario.value = 'invalido'
   } else {
-    mensajeUsuario.value = 'Usuario válido.'
+    mensajeUsuario.value = ''
     validacionUsuario.value = 'valido'
-  }
-}
-
-function validarMunicipio() {
-  if (!municipio.value) {
-    mensajeMunicipio.value = 'Seleccione un municipio.'
-    validacionMunicipio.value = 'invalido'
-  } else {
-    mensajeMunicipio.value = 'Municipio válido.'
-    validacionMunicipio.value = 'valido'
   }
 }
 
@@ -191,8 +185,18 @@ function validarContrasenya() {
     mensajeContrasenya.value = 'Mínimo 8 caracteres y al menos 1 número.'
     validacionContrasenya.value = 'invalido'
   } else {
-    mensajeContrasenya.value = 'Contraseña válida.'
+    mensajeContrasenya.value = ''
     validacionContrasenya.value = 'valido'
+  }
+}
+
+function validarMunicipio() {
+  if (!municipio.value) {
+    mensajeMunicipio.value = 'Seleccione un municipio.'
+    validacionMunicipio.value = 'invalido'
+  } else {
+    mensajeMunicipio.value = ''
+    validacionMunicipio.value = 'valido'
   }
 }
 
@@ -204,7 +208,7 @@ function validarContrasenyaRepetida() {
     mensajeContrasenyaRepetida.value = 'Las contraseñas no coinciden.'
     validacionContrasenyaRepetida.value = 'invalido'
   } else {
-    mensajeContrasenyaRepetida.value = 'Las contraseñas coinciden.'
+    mensajeContrasenyaRepetida.value = ''
     validacionContrasenyaRepetida.value = 'valido'
   }
 }
@@ -237,58 +241,120 @@ function volverAlMenu() {
 </script>
 
 <style scoped>
-.formularios {
+body {
+  background-color: #f9f9fa;
+}
+
+.contenedor_general {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 2rem;
+}
+
+.formularios {
+  width: 100%;
+  max-width: 600px;
 }
 
 .borde_formularios {
-  padding: 20px;
+  background: #fff;
+  border: 1px solid rgba(160, 175, 185, 0.3);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 100%;
-  box-sizing: border-box;
+  gap: 1rem;
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.25rem;
 }
 
 input,
 select {
-  padding: 10px;
+  padding: 0.75rem;
   font-size: 1rem;
-  border: 2px solid #aaa;
-  border-radius: 4px;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
   box-sizing: border-box;
-  transition: border-color 0.3s ease;
-}
-
-.valido {
-  border-color: #4caf50;
-  background-color: #e8f5e9;
-}
-
-.invalido {
-  border-color: #f44336;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   background-color: #fff;
 }
 
+input:focus,
+select:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.valido {
+  border-color: #28a745;
+}
+
+.invalido {
+  border-color: #dc3545;
+}
+
+/* Mensajes de retroalimentación */
+.mensaje {
+  display: inline-block;
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  line-height: 1.2;
+  color: #dc3545;
+}
+
+.valido.mensaje {
+  color: #28a745;
+}
+
+.invalido.mensaje {
+  color: #dc3545;
+}
+
+.mensaje:empty {
+  display: none;
+}
+
+/* Botones alineados y espaciados */
 button {
-  padding: 10px;
+  padding: 0.75rem 1.25rem;
   font-size: 1rem;
   border: none;
-  border-radius: 4px;
-  background-color: #1976d2;
+  border-radius: 0.375rem;
+  background-color: #007bff;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #1565c0;
+  background-color: #0069d9;
+}
+
+.boton + .boton {
+  margin-left: 1rem;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
 }
 </style>
