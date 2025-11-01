@@ -215,7 +215,7 @@ const products = [
 .section-title {
   font-size: 2rem;
   font-weight: 600;
-  color: #333;
+  color: #ff6b00;
   margin-bottom: 2rem;
   text-align: center;
 }

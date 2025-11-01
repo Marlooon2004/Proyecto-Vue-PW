@@ -14,6 +14,12 @@
         <div class="nav-buttons">
           <a href="#reservar" class="btn-reservar">Reservar Ahora</a>
         </div>
+        <div class="switch-theme">
+          <button @click="toggleTheme" class="theme-toggle">
+            <span v-if="isDark">🌙</span>
+            <span v-else>☀️</span>
+          </button>
+        </div>
       </nav>
     </header>
 
@@ -210,7 +216,12 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { inject } from 'vue'
+
+const isDark = inject('isDark')
+const toggleTheme = inject('toggleTheme')
+</script>
 
 <style scoped>
 /* Reset global para body y html */
@@ -550,5 +561,12 @@ p {
   .footer-bottom {
     padding: 20px 10px 0;
   }
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 </style>

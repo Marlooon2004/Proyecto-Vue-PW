@@ -2,8 +2,6 @@
   <div class="contenedor_general">
     <form class="formularios" @submit.prevent="iniciarSesion">
       <fieldset class="borde_formularios">
-        <legend>Información personal</legend>
-
         <!-- Usuario -->
         <label for="usuario_id">Usuario</label>
         <input
