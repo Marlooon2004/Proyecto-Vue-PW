@@ -235,7 +235,7 @@
 }
 
 .header {
-  background-color: #1a1a1a;
+  background-color: #333;
   color: white;
   padding: 0;
   position: sticky;
