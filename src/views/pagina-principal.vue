@@ -7,9 +7,8 @@
           <h2>RentaMotos Habana</h2>
         </div>
         <ul class="nav-links">
-          <li><a href="#top">Inicio</a></li>
           <li><router-link to="/iniciar-seccion">Iniciar sesión</router-link></li>
-          <li><router-link to="">Motos</router-link></li>
+          <li><router-link to="motos-catalogo">Motos</router-link></li>
           <li><a href="#footer_id">Contacto</a></li>
         </ul>
         <div class="nav-buttons">

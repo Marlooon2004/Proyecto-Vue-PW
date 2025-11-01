@@ -193,15 +193,16 @@ button {
   font-size: 1rem;
   border: none;
   border-radius: 0.375rem;
-  background-color: #007bff;
+  background-color: #e55a00;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0069d9;
+  background-color: #cc4a00; /* un tono más oscuro del naranja original */
 }
+
 
 router-link {
   display: block;

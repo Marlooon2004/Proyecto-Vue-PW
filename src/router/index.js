@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PaginaPrincipal from '../views/pagina-principal.vue'
 import IniciarSeccion from '../views/iniciar-seccion.vue'
 import RegistrarUsuario from '../views/registrar-usuario.vue'
+import motosCatalogo from '@/views/motos-catalogo.vue'
 
 const routes = [
   {
@@ -22,6 +23,11 @@ const routes = [
     path: '/registrar-usuario',
     name: 'RegistrarUsuario',
     component: RegistrarUsuario,
+  },
+  {
+    path: '/motos-catalogo',
+    name: 'motosCatalogo',
+    component: motosCatalogo,
   },
 ]
 

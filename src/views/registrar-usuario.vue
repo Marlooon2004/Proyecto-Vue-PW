@@ -80,7 +80,7 @@
             Volver al menú principal
           </button>
         </div>
-        <p>Ya eres miembro? <router-link to="/iniciar-seccion">inicia seccion</router-link></p>
+        <p>Ya eres miembro? <router-link to="/iniciar-seccion">Inicia seccion</router-link></p>
       </fieldset>
     </form>
   </div>
@@ -338,14 +338,14 @@ button {
   font-size: 1rem;
   border: none;
   border-radius: 0.375rem;
-  background-color: #007bff;
+  background-color: #e55a00;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0069d9;
+  background-color: #cc4a00; /* un tono más oscuro del naranja original */
 }
 
 .boton + .boton {
