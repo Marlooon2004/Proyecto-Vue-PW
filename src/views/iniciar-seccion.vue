@@ -59,7 +59,7 @@ function validarUsuario() {
     mensajeUsuario.value = 'Este campo es obligatorio.'
     validacionUsuario.value = 'invalido'
   } else if (!regex.test(usuario.value)) {
-    mensajeUsuario.value = 'Mínimo 3 caracteres. Se permiten letras, números y símbolos.'
+    mensajeUsuario.value = 'Mínimo 3 caracteres. Se permiten letras y números.'
     validacionUsuario.value = 'invalido'
   } else {
     mensajeUsuario.value = ''
@@ -86,6 +86,7 @@ function iniciarSesion() {
   validarContrasenya()
   if (validacionUsuario.value === 'valido' && validacionContrasenya.value === 'valido') {
     alert('Inicio de sesión exitoso 🎉')
+    volverAlMenu();
   }
 }
 </script>
